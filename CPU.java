@@ -1,4 +1,7 @@
 public class CPU{
+
+	public Generator
+	
 	public Result<?> step(byte opCode, byte arg1, byte arg2, byte tick_or_address){
 		// Check for callstack
 
@@ -30,8 +33,8 @@ public class CPU{
 			boolean comp = BitOperations.bytetobits(alu.compute(opcode))[1].get() == 1 ? true : false;
 			if (comp){
 				counter.setValue(tick_or_adress)
-				return Ok<>(opCode+" "+arg1+" "+arg2+" "+tick_or_address)
-			}"
+				return Ok<>(true)
+			}
 		}
 		
 		

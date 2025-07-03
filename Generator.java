@@ -3,11 +3,7 @@ import java.util.Queue
 public class Generator<T>{
 
   private Queue<T> generator_queue
-
-  private int index = 0;
-
-  private bool finished = false;
-  
+    
   public Generator(){
     generator_queue = new Queue<>()
     
@@ -18,7 +14,7 @@ public class Generator<T>{
   }
 
   public T next(){
-    return generator_queue   
+    return generator_queue.poll()
   }
     
   

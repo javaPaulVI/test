@@ -1,8 +1,15 @@
+
+
 public class CPU{
 
-	public Generator
+	public Generator run(Generator generator){
+		
+		for (instruction : program.getInstructions()){
+			generator.add(step())	
+		}
+	}
 	
-	public Result<?> step(byte opCode, byte arg1, byte arg2, byte tick_or_address){
+	private Result<?> step(byte opCode, byte arg1, byte arg2, byte tick_or_address){
 		// Check for callstack
 
 		byte input1 = 0;
